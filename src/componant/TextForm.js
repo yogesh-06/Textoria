@@ -6,6 +6,15 @@ export default function TextForm(props) {
     setText(newText);
   };
 
+  const makeSequence = () => {
+    console.log("Capital 1st Letter");
+    let saprete = text.split(" ");
+    for (let i = 0; i < saprete.length; i++) {
+      saprete[i] = saprete[i][0].toUpperCase() + saprete[i].substr(1);
+      setText(saprete[i]);
+    }
+  };
+
   const handleOnChange = (event) => {
     console.log("onChange");
     setText(event.target.value);
@@ -26,6 +35,9 @@ export default function TextForm(props) {
       </div>
       <button className="btn btn-primary" onClick={handleupClick}>
         Convert To Uppercase
+      </button>
+      <button className="btn btn-primary" onClick={makeSequence}>
+        Capital 1st Letter
       </button>
     </div>
   );
