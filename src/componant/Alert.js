@@ -16,7 +16,7 @@ function Alert(props) {
           type="button"
           className="btn-close p-2"
           data-bs-dismiss="alert"
-          aria-label="Close"
+          // aria-label="Close"
         ></button>
       </div>
     )
